@@ -1,5 +1,11 @@
+body, html {
+	margin: 0;
+	padding: 0;
+}
+
 body {
 	font-family: Arial, Helvetica, sans-serif;
+	-webkit-app-region: drag;
 }
 
 .error {
@@ -9,4 +15,33 @@ body {
 textarea {
 	width: 100%;
 	resize: none;
+}
+
+header {
+	background: #181818;
+	position: relative;
+}
+
+header img {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	cursor: pointer;
+}
+
+
+h1 {
+	color: white;
+	margin: 0 10px;
+	padding: 0;
+	line-height: 4rem;
+}
+
+.row {
+	margin: 10px;
+}
+
+.row label {
+	display: inline-block;
+	width: 190px;
 }

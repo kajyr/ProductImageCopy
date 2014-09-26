@@ -5,10 +5,12 @@
 	<link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-	<h1>copiare le immagini</h1>
+	<header>
+		<h1>copiare le immagini</h1>
+		<img src="svg/cross.svg" alt="chiudi" role="close">
+	</header>
 
-
-
+	<main>
 		<div class="row">
 			<label for="srcDir">Cartella immagini: </label>
 			<input id="srcDir" type="file" nwdirectory />
@@ -24,9 +26,10 @@
 			<button id="go" >Carica</button>
 		</div>
 
-	<div id="results">
-		<ul></ul>
-	</div>
+		<div id="results">
+			<ul></ul>
+		</div>
+	</main>
 	<script src="js-vendor/jquery-2.1.1.min.js"></script>
 	<script src="js-vendor/underscore-min.js"></script>
 	<script src="js/main.js"></script>

@@ -68,3 +68,10 @@ $submit.on('click', () ->
 
 	
 )
+
+
+#
+#  CLOSE
+#
+#
+$('[role="close"]').on('click', () -> gui.App.quit() )

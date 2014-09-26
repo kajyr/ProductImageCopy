@@ -4,7 +4,8 @@
   "description": "",
   "main": "src/index.html",
   "window": {
-    "toolbar": true,
+    "frame": false,
+    "toolbar": false,
     "width": 800,
     "height": 600
   },
