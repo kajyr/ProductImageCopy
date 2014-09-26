@@ -66,4 +66,8 @@
     });
   });
 
+  $('[role="close"]').on('click', function() {
+    return gui.App.quit();
+  });
+
 }).call(this);
