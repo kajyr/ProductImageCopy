@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>copiare le immagini</title>
+	<link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+	<h1>copiare le immagini</h1>
+
+
+
+		<div class="row">
+			<label for="srcDir">Cartella immagini: </label>
+			<input id="srcDir" type="file" nwdirectory />
+		</div>
+		<div class="row">
+			<label for="destDir">Cartella destinazione: </label>
+			<input id="destDir" type="file" nwdirectory />
+		</div>
+		<div class="row">
+			<textarea name="" id="template" cols="30" rows="10" placeholder="template"></textarea>
+		</div>
+		<div class="row">
+			<button id="go" >Carica</button>
+		</div>
+
+	<div id="results">
+		<ul></ul>
+	</div>
+	<script src="js-vendor/jquery-2.1.1.min.js"></script>
+	<script src="js-vendor/underscore-min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
