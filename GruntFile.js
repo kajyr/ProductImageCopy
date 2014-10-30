@@ -25,7 +25,7 @@ module.exports = function(grunt) {
 		},
 		nodewebkit: {
 			options: {
-				platforms: ['win'],
+				platforms: ['win','osx'],
 				buildDir: 'webkitbuilds',
 			},
 			src: ['cache/build/**']
@@ -39,6 +39,7 @@ module.exports = function(grunt) {
 		},
 		clean: {
 			build: ["cache/build"],
+			js: ["src/js/**.js"]
 		},
 
 	});

@@ -13,7 +13,7 @@
 
   destDir = null;
 
-  fs = require('fs');
+  fs = require('fs-extra');
 
   $inputSourcePath.on('change', function(evt) {
     return sourceDir = $(this).val();
@@ -32,8 +32,12 @@
   };
 
   copyFile = function(source, to) {
-    fs.createReadStream(source).pipe(fs.createWriteStream(to));
-    return logResult("" + source + "<br/> copiato in <br />" + to);
+    return fs.copy(source, to, function(err) {
+      if (err) {
+        return logError("" + from + " errore durante la copia");
+      }
+      return logResult("" + source + "<br/> copiato in <br />" + to);
+    });
   };
 
   parseCode = function(from, to) {

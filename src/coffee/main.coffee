@@ -7,9 +7,7 @@ $inputDestPath = $('#destDir')
 sourceDir = null
 destDir = null
 
-
-fs = require('fs')
-
+fs = require('fs-extra')
 
 
 $inputSourcePath.on('change', (evt) ->
@@ -28,10 +26,10 @@ logError = (msg) ->
 	$results.append "<li class='error'>#{msg}</li>"
 
 copyFile = (source, to) ->
-	fs
-		.createReadStream(source)
-		.pipe(fs.createWriteStream(to))
-	logResult("#{source}<br/> copiato in <br />#{to}")
+	fs.copy(source, to, (err) ->
+		  return logError("#{from} errore durante la copia") if (err) 
+		  logResult("#{source}<br/> copiato in <br />#{to}")
+	)
 
 parseCode = (from, to) ->
 	source = sourceDir + "/" + from + ".jpg"
